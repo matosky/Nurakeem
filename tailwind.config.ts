@@ -38,6 +38,7 @@ const config: Config = {
         transBtnBg: "#18BC9C4A",
         dividerBorder: "#F0F0F08F",
         thickBtnBg: "#18BC9C",
+        nurakeemGrayBg: "#F0F0F0A3",
         formBorderColor: "#BDC3C7",
         nurakeemFooterBg: "#151515",
         nurakeemFooterColor: "#151515",
