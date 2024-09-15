@@ -23,7 +23,7 @@ export default function Addresses() {
               <h2 className="text-white bg-customLightGreen py-2 px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
                 Our Services
               </h2>
-              <div className="font-normal px-6 leading-[30px] text-left">
+              <div className="font-normal text-primary px-6 leading-[30px] text-left">
                 <p>
                   <strong>LONDON / ESSEX:</strong> 6 Edgehill Gardens Dagenham
                   RM10 7LB
@@ -35,7 +35,7 @@ export default function Addresses() {
               <h2 className="text-white bg-customLightGreen py-2 px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
                 24/7 Quick Contact
               </h2>
-              <div className="flex px-6 flex-col gap-3 items-start">
+              <div className="flex text-primary px-6 flex-col gap-3 items-start">
                 <span className="">
                   <strong>Phone: </strong> 020 3774 2766
                 </span>
@@ -53,7 +53,7 @@ export default function Addresses() {
               <h2 className="text-white py-2 bg-customLightGreen px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
                 Working Hours
               </h2>
-              <div className="flex px-6 flex-col gap-3 items-start">
+              <div className="flex text-primary px-6 flex-col gap-3 items-start">
                 <span>
                   <strong>Mon - Fri:</strong> 9.00AM to 5.00PM
                 </span>

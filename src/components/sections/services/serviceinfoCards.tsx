@@ -39,15 +39,16 @@ const cards = [
       "From planning events to providing entertainment options, we make sure your leisure time is enjoyable and memorable.",
   },
 ];
+
 export default function ServiceInfoCards() {
   return (
     <section className="mt-40 mb-40 w-full">
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-1 gap-8">
+        <div className="grid grid-cols-2 gap-8 mobile_lg:grid-cols-1 tablet_min:grid-cols-2">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="max-w-md mx-auto bg-white rounded-lg  overflow-hidden"
+              className="max-w-[100%] mx-auto bg-white rounded-lg  overflow-hidden"
             >
               <div className="relative h-80">
                 <Image

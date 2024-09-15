@@ -2,11 +2,12 @@ import React from "react";
 
 type ContainerProps = {
   children: React.ReactNode;
+  height?: string
 };
 
-function Container({ children }: ContainerProps) {
+function Container({ children, height }: ContainerProps) {
   return (
-    <div className="w-[75%]  mx-auto"  >
+    <div className={`w-[70%] h-[${height}]  mx-auto`}  >
       {children}
     </div>
   );
