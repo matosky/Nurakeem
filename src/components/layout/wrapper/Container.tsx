@@ -6,7 +6,7 @@ type ContainerProps = {
   width?: string;
 };
 
-function Container({ children, height, width }: ContainerProps) {
+function Container({ children, height }: ContainerProps) {
   return (
     <div className={`tablet_md:w-[90%] desktop_sm:w-[75%] w-[70%] h-[${height}]  mx-auto`}  >
       {children}

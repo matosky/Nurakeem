@@ -1,4 +1,3 @@
-import clientPromise from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
@@ -29,7 +28,7 @@ export async function POST(request: Request) {
     // }
 
     // Create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com", // Replace with your mail server info
       port: 587,
       secure: false, // true for 465, false for other ports
@@ -40,7 +39,7 @@ export async function POST(request: Request) {
     });
 
     // Send mail with defined transport object
-    let info = await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: '"Nurakeem" <no-reply@example.com>', // Sender address
       to: "mathiasakari37@gmail.com", // List of receivers
       subject: "New Contact Form Submission", // Subject line
@@ -65,8 +64,7 @@ export async function POST(request: Request) {
     } else {
       return NextResponse.json({ message: 'Failed to send email.' }, { status: 500 });
     }
-  } catch (error: any) {
-    console.error("Error:", error);
-    return NextResponse.json({ message: 'An error occurred.', error: error.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ message: 'An error occurred.'}, { status: 500 });
   }
 }

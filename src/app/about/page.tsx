@@ -5,7 +5,7 @@ import OurValues from "@/components/sections/about/OurValues";
 import Professionalism from "@/components/sections/about/Professionalism";
 import AboutVison from "@/components/sections/about/Vision";
 
-export default function(){
+export default function About(){
     return (
       <>
        <AboutHero />

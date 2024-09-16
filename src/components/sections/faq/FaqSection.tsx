@@ -7,12 +7,12 @@ export default function FaqSection() {
       <Container>
         <section className="my-10">
           <div>
-            <p className="text-nurakeemYellowColor   text-center font-medium text-lg">
+            <p className="text-nurakeemYellowColor text-center font-medium text-lg">
               We know you have many questions about Nurakeem <br /> Services, so
-              we've tried our best to answer them.
+              we&#39;ve tried our best to answer them.
             </p>
-            <h2 className="text-[24px] font-lora font-sem ibold leading-[30.72px] text-center mt-4 text-primary mb-4">
-              Nurakeems Service FAQS
+            <h2 className="text-[24px] font-lora font-semibold leading-[30.72px] text-center mt-4 text-primary mb-4">
+              Nurakeem&#39;s Service FAQS
             </h2>
           </div>
         </section>

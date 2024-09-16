@@ -1,4 +1,3 @@
-import Button from "../../ui/button/Button";
 
 export default function ContactHero() {
   return (

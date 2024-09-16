@@ -45,8 +45,7 @@ export default function ContactForm() {
         const errorData = await response.json();
         setFormStatus(`Failed to submit the form: ${errorData.message}`);
       }
-    } catch (error: any) {
-      console.error("Error submitting form:", error);
+    } catch (error) {
       setFormStatus("Failed to submit the form.");
     }
   };
