@@ -12,10 +12,10 @@ const cards = [
     img: "/images/s2.png",
     title: "Supported Living Accommodation",
     descr:
-      "we provide an accommodation which enable each person to develop new skills and live increasingly fulfilled and independent lives.",
+      "We provide an accommodation which enables each person to develop new skills and live increasingly fulfilled and independent lives.",
   },
   {
-    img: "/images/s2.png",
+    img: "/images/s3.png",
     title: "Healthcare Training",
     descr:
       "Our Healthcare Training offers key skills and practical knowledge to excel in patient care and succeed in healthcare roles.",
@@ -24,7 +24,7 @@ const cards = [
     img: "/images/s4.png",
     title: "Restaurant",
     descr:
-      "Enjoy exquisite dining with at Mazees restaurant services, featuring a variety of delicious Afro/Caribbean.",
+      "Enjoy exquisite dining with Mazees restaurant services, featuring a variety of delicious Afro/Caribbean dishes.",
   },
   {
     img: "/images/s5.png",
@@ -48,14 +48,17 @@ export default function ServiceInfoCards() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="max-w-[100%] mx-auto bg-white rounded-lg  overflow-hidden"
+              className="max-w-[100%] mx-auto bg-white rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105"
             >
               <div className="relative h-80">
                 <Image
-                  className="object-cover w-full h-full"
+                  className="object-cover"
                   src={card.img}
-                  alt="Service Image"
+                  alt={`${card.title} Image`}
                   layout="fill"
+                  objectFit="cover"
+                  quality={75} // Adjust quality for better optimization
+                  loading="lazy" // Lazy load images for better performance
                 />
               </div>
               <div className="p-6">
