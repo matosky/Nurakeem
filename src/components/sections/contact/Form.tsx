@@ -1,10 +1,8 @@
 "use client"; // Marks this component as a client component
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Container from "@/components/layout/wrapper/Container";
 import FormInput from "@/components/ui/formInput/FormInput";
-import { db } from "@/lib/firebaseConfig"; // Import Firestore database
-import { collection, addDoc } from "firebase/firestore"; // Firestore functions
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -33,36 +31,26 @@ export default function ContactForm() {
     setFormStatus(null); // Reset form status
   
     try {
-      // Add form data to the Firestore collection
-      console.log({formData})
-      const docRef = await addDoc(collection(db, "customers"), formData);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // Ensure formData is JSON
+      });
   
-      // Log the response (DocumentReference object)
-      console.log("Document written with ID: ", docRef.id);
-  
-      // Update form status
-      setFormStatus("Form submitted successfully!");
-    } catch (error:any) {
-      // Log the full error response
+      if (response.ok) {
+        setFormStatus("Form submitted successfully!");
+      } else {
+        const errorData = await response.json();
+        setFormStatus(`Failed to submit the form: ${errorData.message}`);
+      }
+    } catch (error: any) {
       console.error("Error submitting form:", error);
-      console.log("Error response:", error.response); // Log detailed error response
       setFormStatus("Failed to submit the form.");
     }
   };
   
-
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const targetElement = document.querySelector(hash);
-      if (targetElement) {
-        setTimeout(() => {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    }
-  }, []);
 
   return (
     <section className="py-20" id="book-meeting">
