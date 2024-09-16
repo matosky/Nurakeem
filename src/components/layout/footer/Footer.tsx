@@ -111,10 +111,10 @@ function Footer() {
       <section>
         <Container>
           <div>
-            <p className="w-full tablet_md:text-left text-center mb-4 font-normal leading-[43px]">
+            <p className="w-full mobile_sm:text-center  tablet_md:text-left text-center mb-4 font-normal leading-[43px]">
               Copyright &copy; 2024 Nurakeem Services | All Rights Reserved
             </p>
-            <div className="tablet_md:justify-start  flex w-[fit-content] tablet_md:mx-0 mx-auto items-center gap-4">
+            <div className=" flex w-[fit-content]  mx-auto items-center gap-4">
               {socials.map((s, index) => {
                 return <span key={index}>{s.icon}</span>;
               })}
