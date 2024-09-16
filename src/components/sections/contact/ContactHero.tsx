@@ -10,7 +10,6 @@ export default function ContactHero() {
         layout="fill"
         objectFit="cover"
         priority // Ensure the image loads early
-        quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />
 

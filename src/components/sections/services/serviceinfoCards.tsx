@@ -57,7 +57,6 @@ export default function ServiceInfoCards() {
                   alt={`${card.title} Image`}
                   layout="fill"
                   objectFit="cover" // Ensures proper scaling and cropping
-                  quality={75} // Optimizes image loading without compromising quality
                   loading="lazy" // Lazy loading to improve performance
                 />
               </div>

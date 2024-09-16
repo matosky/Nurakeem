@@ -10,7 +10,6 @@ export default function FaqHero() {
         layout="fill"
         objectFit="cover"
         priority // Ensures the image is loaded quickly
-        quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />
 

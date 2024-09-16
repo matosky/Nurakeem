@@ -11,7 +11,6 @@ export default function ServicesHero() {
         layout="fill"
         objectFit="cover"
         priority // Ensure this image loads early
-        quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />
 

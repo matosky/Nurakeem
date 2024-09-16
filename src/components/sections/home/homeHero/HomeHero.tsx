@@ -21,7 +21,6 @@ export default function HomeHero() {
         layout="fill"
         objectFit="cover"
         priority // Ensures it's loaded early
-        quality={75} // Adjust quality for performance
         className="absolute"
       />
 

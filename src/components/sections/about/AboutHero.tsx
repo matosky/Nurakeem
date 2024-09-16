@@ -12,7 +12,6 @@ export default function AboutHero() {
         layout="fill"
         objectFit="cover"
         priority // Ensures it loads quickly
-        quality={75} // Adjust for performance optimization
         className="absolute"
       />
 
