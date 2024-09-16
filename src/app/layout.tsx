@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${open_sans.variable} ${lora.variable}`} >
+    <html lang="en" className={`${open_sans.variable}  ${lora.variable}`} >
       <body>
           <Header />
             <div id="top">{children}</div>

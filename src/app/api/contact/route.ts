@@ -1,3 +1,4 @@
+import clientPromise from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
@@ -5,7 +6,28 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { firstName, lastName, phoneNumber, email, address1, address2, message } = body;
-   console.log({body})
+
+    // Save form data to MongoDB
+    // const client = await clientPromise;
+    // const db = client.db("nurakeem"); // Replace with your database name
+    // const collection = db.collection("contactSubmissions"); // Replace with your collection name
+
+    // // Insert data into MongoDB
+    // const result = await collection.insertOne({
+    //   firstName,
+    //   lastName,
+    //   phoneNumber,
+    //   email,
+    //   address1,
+    //   address2,
+    //   message,
+    //   createdAt: new Date(),
+    // });
+
+    // if (!result.acknowledged) {
+    //   return NextResponse.json({ message: 'Failed to save data to MongoDB.' }, { status: 500 });
+    // }
+
     // Create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       host: "smtp.gmail.com", // Replace with your mail server info
@@ -29,7 +51,7 @@ export async function POST(request: Request) {
       Address1: ${address1}
       Address2: ${address2}
       Message: ${message}`, // Plain text body
-      html: `<b>New submission from:</b><br>
+      html: `<b>New submission from Nurakeem landing page:</b><br>
       Name: ${firstName} ${lastName}<br>
       Phone: ${phoneNumber}<br>
       Email: ${email}<br>
@@ -43,8 +65,8 @@ export async function POST(request: Request) {
     } else {
       return NextResponse.json({ message: 'Failed to send email.' }, { status: 500 });
     }
-  } catch (error:any) {
-    console.error("Error sending email:", error);
+  } catch (error: any) {
+    console.error("Error:", error);
     return NextResponse.json({ message: 'An error occurred.', error: error.message }, { status: 500 });
   }
 }
