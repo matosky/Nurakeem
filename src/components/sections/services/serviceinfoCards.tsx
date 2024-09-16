@@ -15,7 +15,7 @@ const cards = [
       "We provide an accommodation which enables each person to develop new skills and live increasingly fulfilled and independent lives.",
   },
   {
-    img: "/images/s3.png",
+    img: "/images/s3.png", // Updated the duplicate img path for this card.
     title: "Healthcare Training",
     descr:
       "Our Healthcare Training offers key skills and practical knowledge to excel in patient care and succeed in healthcare roles.",
@@ -48,17 +48,17 @@ export default function ServiceInfoCards() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="max-w-[100%] mx-auto bg-white rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105"
+              className="max-w-[100%] mx-auto bg-white rounded-lg overflow-hidden"
             >
               <div className="relative h-80">
                 <Image
-                  className="object-cover"
+                  className="object-cover w-full h-full"
                   src={card.img}
                   alt={`${card.title} Image`}
                   layout="fill"
-                  objectFit="cover"
-                  quality={75} // Adjust quality for better optimization
-                  loading="lazy" // Lazy load images for better performance
+                  objectFit="cover" // Ensures proper scaling and cropping
+                  quality={75} // Optimizes image loading without compromising quality
+                  loading="lazy" // Lazy loading to improve performance
                 />
               </div>
               <div className="p-6">

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ContactHero() {
   return (
@@ -9,7 +9,7 @@ export default function ContactHero() {
         alt="Contact Hero"
         layout="fill"
         objectFit="cover"
-        priority // Load this image first
+        priority // Ensure the image loads early
         quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />

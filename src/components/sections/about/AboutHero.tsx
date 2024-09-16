@@ -1,21 +1,18 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Container from "@/components/layout/wrapper/Container";
 import Button from "../../ui/button/Button";
 
 export default function AboutHero() {
   return (
-    <section
-      id="hero"
-      className="relative mt-[-70px] w-screen h-screen bg-cover bg-center"
-    >
+    <section id="hero" className="relative mt-[-70px] w-screen h-screen bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/about_hero.png"
         alt="About Hero"
         layout="fill"
         objectFit="cover"
-        priority // Load this image as a priority
-        quality={75} // Adjust the quality to balance performance and clarity
+        priority // Ensures it loads quickly
+        quality={75} // Adjust for performance optimization
         className="absolute"
       />
 

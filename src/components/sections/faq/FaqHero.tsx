@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function FaqHero() {
   return (
@@ -9,8 +9,8 @@ export default function FaqHero() {
         alt="FAQ Hero"
         layout="fill"
         objectFit="cover"
-        priority // Ensure the image is loaded early
-        quality={75} // Adjust quality for performance
+        priority // Ensures the image is loaded quickly
+        quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />
 

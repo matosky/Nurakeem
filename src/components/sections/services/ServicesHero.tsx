@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Button from "../../ui/button/Button";
 
 export default function ServicesHero() {
@@ -10,7 +10,7 @@ export default function ServicesHero() {
         alt="Services Hero"
         layout="fill"
         objectFit="cover"
-        priority // Ensure the image is loaded early
+        priority // Ensure this image loads early
         quality={75} // Adjust quality to balance performance and clarity
         className="absolute"
       />
