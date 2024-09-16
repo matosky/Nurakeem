@@ -5,9 +5,11 @@ export default function AboutStats() {
   return (
     <section className="w-full py-20 mt-20">
       <Container>
-        <div className="container mx-auto ">
-          <div className="flex items-center gap-4">
-            <div className="bg-white w-[400px] gap-3 flex items-center  p-8  rounded-lg text-center border-2 border-formBorder border-dashed">
+        <div className="container mx-auto">
+          {/* Flexbox structure for cards */}
+          <div className="flex flex-wrap gap-8 justify-center">
+            {/* Card 1 */}
+            <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
                 src="images/svg/about_card_one.svg"
                 alt="icon"
@@ -15,14 +17,15 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl  font-bold text-gray-800">200+</div>
+                <div className="text-3xl font-bold text-gray-800">200+</div>
                 <p className="text-gray-600 text-left whitespace-nowrap mt-2">
                   Successful healthcare services
                 </p>
               </div>
             </div>
 
-            <div className="bg-white gap-3 w-[400px] p-8 flex items-center  rounded-lg text-center border-2 border-formBorder border-dashed">
+            {/* Card 2 */}
+            <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
                 src="images/svg/about_card_two.svg"
                 alt="icon"
@@ -37,7 +40,8 @@ export default function AboutStats() {
               </div>
             </div>
 
-            <div className="bg-white w-[400px] flex gap-3  items-center  p-8  rounded-lg text-center border-2 border-formBorder border-dashed">
+            {/* Card 3 */}
+            <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
                 src="images/svg/about_card_three.svg"
                 alt="icon"
@@ -46,13 +50,14 @@ export default function AboutStats() {
               />
               <div className="flex flex-col items-start">
                 <div className="text-3xl font-bold text-gray-800">5</div>
-                <p className="text-gray-600 text-left mt-2">Total Award Won</p>
+                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                  Total Award Won
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="flex  mt-8">
-            <div className="bg-white w-[355px] mx-auto flex gap-3 items-center   p-8  rounded-lg text-center border-2 border-formBorder border-dashed">
+            {/* Card 4 */}
+            <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px]  max-w-[320px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
                 src="images/svg/about_card_four.svg"
                 alt="icon"
@@ -61,7 +66,9 @@ export default function AboutStats() {
               />
               <div className="flex flex-col items-start">
                 <div className="text-3xl font-bold text-gray-800">30</div>
-                <p className="text-gray-600 text-left mt-2">Professional Workers</p>
+                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                  Professional Workers
+                </p>
               </div>
             </div>
           </div>

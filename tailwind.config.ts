@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,15 +6,30 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-      keyframes: {
-        slideIn: {
-          '0%': { transform: 'translateX(-100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
-        },
+    keyframes: {
+      slideIn: {
+        "0%": { transform: "translateX(-100%)", opacity: "0" },
+        "100%": { transform: "translateX(0)", opacity: "1" },
       },
-      animation: {
-        slideIn: 'slideIn 1s ease-out forwards', // duration can be adjusted as needed
+      slideFromTop: {
+        "0%": { transform: "translateY(-100%)", opacity: "0" },
+        "100%": { transform: "translateY(0)", opacity: "1" },
       },
+      slideFromLeft: {
+        "0%": { transform: "translateX(-100%)", opacity: "0" },
+        "100%": { transform: "translateX(0)", opacity: "1" },
+      },
+      slideFromBottom: {
+        "0%": { transform: "translateY(100%)", opacity: "0" },
+        "100%": { transform: "translateY(0)", opacity: "1" },
+      },
+    },
+    animation: {
+      slideFromTop: "slideFromTop 1s ease-out forwards",
+      slideFromLeft: "slideFromLeft 1s ease-out forwards",
+      slideFromBottom: "slideFromBottom 1s ease-out forwards",
+      slideIn: "slideIn 1s ease-out forwards", // duration can be adjusted as needed
+    },
     screens: {
       big_screen: { max: "2000px" },
       desktop_xl: { max: "1920px" },
@@ -29,11 +43,11 @@ const config: Config = {
       mobile_sm: { max: "390px" },
       mobile_xs: { max: "281px" },
     },
-    fontFamily: {
-      openSans: ["OpenSans", "sans-serif"],
-      lora: ["Lora", "sans-serif"]
-    },
     extend: {
+      fontFamily: {
+        lora: ["var(--font-lora)"],
+        openSans: ["var(--font-open-sans)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

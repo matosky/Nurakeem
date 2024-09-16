@@ -1,7 +1,7 @@
 function NuraLogo() {
   return (
     <svg
-      width="180"
+      width="150"
       height="31"
       viewBox="0 0 195 31"
       fill="none"

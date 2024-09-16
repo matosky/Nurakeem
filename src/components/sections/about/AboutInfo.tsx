@@ -8,7 +8,7 @@ export default function AboutInfo() {
           About Us
         </h2>
         <div className="text-primary">
-          <p className="text-base font-normal leading-[35px] text-left">
+          <p className="text-base font-normal mobile_lg:leading-[30px] leading-[40px] text-left">
             <strong>Nurakeem Services</strong> is registered and regulated by the Care Quality
             Commission (CQC) and commissioned by the London Borough of Barking
             and Dagenham (LBBD). <br /> Our mission is to develop services that
@@ -24,7 +24,7 @@ export default function AboutInfo() {
             practice offered to clients, to the depth of experience and training
             of staff.
           </p>
-          <p className="text-base font-normal leading-[35px] text-left my-4">
+          <p className="text-base font-normal mobile_lg:leading-[30px] leading-[40px] text-left my-4">
             <strong>Angy Homes,</strong> a subsidiary of Nurakeem Services, provides specialist
             support for Adults with Learning, Mental Health and Autism related
             support needs.Through our therapeutic and personalised pathway

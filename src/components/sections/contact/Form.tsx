@@ -1,11 +1,12 @@
 "use client"; // Marks this component as a client component
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "@/components/layout/wrapper/Container";
 import FormInput from "@/components/ui/formInput/FormInput";
+import { db } from "@/lib/firebaseConfig"; // Import Firestore database
+import { collection, addDoc } from "firebase/firestore"; // Firestore functions
 
 export default function ContactForm() {
-  // State to manage form inputs
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -30,58 +31,74 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus(null); // Reset form status
-
+  
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setFormStatus("Form submitted successfully!");
-      } else {
-        setFormStatus("Failed to submit the form.");
-      }
-    } catch (error) {
+      // Add form data to the Firestore collection
+      console.log({formData})
+      const docRef = await addDoc(collection(db, "customers"), formData);
+  
+      // Log the response (DocumentReference object)
+      console.log("Document written with ID: ", docRef.id);
+  
+      // Update form status
+      setFormStatus("Form submitted successfully!");
+    } catch (error:any) {
+      // Log the full error response
       console.error("Error submitting form:", error);
-      setFormStatus("An error occurred.");
+      console.log("Error response:", error.response); // Log detailed error response
+      setFormStatus("Failed to submit the form.");
     }
   };
+  
+
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="book-meeting">
       <Container>
         <h2 className="text-[24px] font-lora font-semibold leading-[30.72px] text-center text-primary mb-4">
           Book a Meeting
         </h2>
         <div className="text-primary">
-          <p className="text-base font-normal leading-[35px] text-center">
-            Please fill out the form below to be added to our customer list
+          <p className="text-base font-normal leading-[30px] text-center">
+            Please fill out the form below to be added to <br /> our customer list
           </p>
         </div>
-        <form className="w-[60%] mx-auto" onSubmit={handleSubmit}>
-          <div>
-            <FormInput
-              label="First Name"
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              handleInputChange={handleInputChange}
-            />
+
+        <form className="w-full max-w-[700px] mx-auto" onSubmit={handleSubmit}>
+          <div className="flex flex-col tablet_md:flex-row gap-4">
+            <div className="w-full tablet_md:w-1/2">
+              <FormInput
+                label="First Name"
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                handleInputChange={handleInputChange}
+              />
+            </div>
+            <div className="w-full tablet_md:w-1/2">
+              <FormInput
+                label="Last Name"
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                handleInputChange={handleInputChange}
+              />
+            </div>
           </div>
-          <div>
-            <FormInput
-              label="Last Name"
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              handleInputChange={handleInputChange}
-            />
-          </div>
-          <div>
+
+          <div className="mt-4">
             <FormInput
               label="Phone Number"
               type="number"
@@ -90,7 +107,8 @@ export default function ContactForm() {
               handleInputChange={handleInputChange}
             />
           </div>
-          <div>
+
+          <div className="mt-4">
             <FormInput
               label="Email"
               type="text"
@@ -99,39 +117,43 @@ export default function ContactForm() {
               handleInputChange={handleInputChange}
             />
           </div>
-          <div>
-            <FormInput
-              label="Address (1)"
-              type="text"
-              name="address1"
-              value={formData.address1}
-              handleInputChange={handleInputChange}
-            />
+
+          <div className="flex flex-col tablet_md:flex-row gap-4 mt-4">
+            <div className="w-full tablet_md:w-1/2">
+              <FormInput
+                label="Address (1)"
+                type="text"
+                name="address1"
+                value={formData.address1}
+                handleInputChange={handleInputChange}
+              />
+            </div>
+            <div className="w-full tablet_md:w-1/2">
+              <FormInput
+                label="Address (2)"
+                type="text"
+                name="address2"
+                value={formData.address2}
+                handleInputChange={handleInputChange}
+              />
+            </div>
           </div>
-          <div>
-            <FormInput
-              label="Address2"
-              type="text"
-              name="address2"
-              value={formData.address2}
-              handleInputChange={handleInputChange}
-            />
-          </div>
-          <div>
+
+          <div className="mt-4">
             <FormInput
               label="Message"
               type="textarea"
               name="message"
               value={formData.message}
               handleInputChange={handleInputChange}
-              rows={5} // Additional textarea attributes
+              rows={5}
             />
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 w-full">
             <button
               type="submit"
-              className={`py-3 rounded-[40px] block px-10 bg-thickBtnBg font-normal text-white transition-all flex items-center ease-in-out delay-150`}
+              className={`py-3 rounded-[40px] block px-10 bg-thickBtnBg font-normal text-white transition-all flex items-center justify-center ease-in-out delay-150`}
             >
               Submit Now
             </button>

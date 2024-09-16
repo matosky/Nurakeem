@@ -15,13 +15,14 @@ export default function Addresses() {
           </div>
         </section>
       </Container>
-
       <section className="w-full bg-nurakeemGrayBg py-20">
         <Container>
-          <div className="flex justify- gap-10">
+          {/* Flex container for the cards */}
+          <div className="flex flex-row tablet_min:flex-col justify-between gap-10">
+            {/* Column 1: Visit our Office */}
             <div className="flex-1">
               <h2 className="text-white bg-customLightGreen py-2 px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
-                Our Services
+                Visit our Office
               </h2>
               <div className="font-normal text-primary px-6 leading-[30px] text-left">
                 <p>
@@ -31,12 +32,13 @@ export default function Addresses() {
               </div>
             </div>
 
+            {/* Column 2: 24/7 Quick Contact */}
             <div className="flex-1">
               <h2 className="text-white bg-customLightGreen py-2 px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
                 24/7 Quick Contact
               </h2>
               <div className="flex text-primary px-6 flex-col gap-3 items-start">
-                <span className="">
+                <span>
                   <strong>Phone: </strong> 020 3774 2766
                 </span>
                 <span>
@@ -49,8 +51,9 @@ export default function Addresses() {
               </div>
             </div>
 
+            {/* Column 3: Working Hours */}
             <div className="flex-1">
-              <h2 className="text-white py-2 bg-customLightGreen px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
+              <h2 className="text-white bg-customLightGreen py-2 px-6 text-[24px] font-lora font-semibold leading-[30.72px] text-left mb-4">
                 Working Hours
               </h2>
               <div className="flex text-primary px-6 flex-col gap-3 items-start">
