@@ -15,7 +15,7 @@ const cards = [
       "We provide an accommodation which enables each person to develop new skills and live increasingly fulfilled and independent lives.",
   },
   {
-    img: "/images/s3.png", // Updated the duplicate img path for this card.
+    img: "/images/s2.png", // Updated the duplicate img path for this card.
     title: "Healthcare Training",
     descr:
       "Our Healthcare Training offers key skills and practical knowledge to excel in patient care and succeed in healthcare roles.",
