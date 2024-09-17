@@ -9,7 +9,6 @@ import { useState } from "react";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Drawer from "../drawer/Drawer";
 import CloseIcon from "@/components/ui/icons/Close";
-import Container from "../wrapper/Container";
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
