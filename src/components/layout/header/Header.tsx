@@ -9,6 +9,7 @@ import { useState } from "react";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Drawer from "../drawer/Drawer";
 import CloseIcon from "@/components/ui/icons/Close";
+import Container from "../wrapper/Container";
 
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -18,32 +19,31 @@ function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
+  // Function to handle dropdown visibility
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="flex items-center bg-white py-3 sticky top-0 z-30 mobile_lg:py-2.5">
-      <div className="flex desktop_sm:w-[85%] tablet_md:w-[90%] w-[80%] mx-auto justify-between items-center">
-        <Link href={"/"} className="flex items-center">
-          {/* Apply the animation to the logo image */}
+      <div className="flex relative border border-red-500 tablet_md:w-[90%] justify-end border  desktop_sm:w-[75%]  w-[80%] mx-auto space-x-[155px] items-center">
+      <Link href={"/"} className="flex items-center mobile_lg:left-0 absolute left-[-55px] top-1/2 -translate-y-1/2">
           <Image
             src="images/svg/logo_anim.svg"
             alt="icon"
             width={40}
             height={40}
-            className="mr-2 animate-slideIn"
+            className="animate-slideIn"
           />
           <NuraLogo />
         </Link>
-        <ul className="tablet_md:hidden flex desktop:space-x-4 space-x-8 items-center relative">
+        <div className="flex mobile_lg:none items-center" />
+        <ul className="tablet_md:hidden flex space-x-[60px] items-center relative">
           {headerRoutes.map(
             (route: { name: string; id: string; path: string }) => (
               <li
                 key={route.id}
                 className="relative text-center h-auto flex items-center text-primary"
-                onMouseEnter={() =>
-                  route.name === "About" && setDropdownOpen(true)
-                }
-                onMouseLeave={() =>
-                  route.name === "About" && setDropdownOpen(false)
-                }
               >
                 <Link
                   href={route.path}
@@ -53,11 +53,14 @@ function Header() {
                 </Link>
                 {route.name === "About" && (
                   <>
+                    {/* Arrow Icon to toggle dropdown */}
                     <Image
                       src="/images/svg/dropdown_icon.svg"
                       alt="icon"
                       width={20}
                       height={20}
+                      onMouseOver={toggleDropdown} // Only toggle when clicking the icon
+                      className="cursor-pointer"
                     />
                     {/* Dropdown */}
                     <div
@@ -81,25 +84,30 @@ function Header() {
           )}
         </ul>
         <Button
-          icon={<FaPhone className="mt-[-4px] text-white" />}
+          icon={<FaPhone className="text-white text-1xl" />}
           thickBtnBg
-          className="tablet_md:hidden desktop:px-4 desktop:text-2sm desktop:py-2 bg-thickBtnBg text-white px-10 py-3"
+          className="tablet_md:hidden flex items-baseline desktop:px-4 desktop:text-2sm desktop:py-2 bg-thickBtnBg text-white px-10 py-3"
           rounded="rounded-[40px]"
         >
           +44 7904451016
         </Button>
 
         {!isDrawerOpen ? (
-          <div onClick={toggleDrawer} className="hidden w-[64px] h-[55.41px] tablet_md:block">
+          <div
+            onClick={toggleDrawer}
+            className="hidden w-[64px] h-[55.41px] tablet_md:block"
+          >
             <HamburgerIcon /> {/* Toggle drawer on click */}
           </div>
         ) : (
-          <div onClick={toggleDrawer} className="hidden w-[64px] h-[55.41px] tablet_md:block">
+          <div
+            onClick={toggleDrawer}
+            className="hidden w-[64px] h-[55.41px] tablet_md:block"
+          >
             <CloseIcon /> {/* Toggle drawer on click */}
           </div>
         )}
       </div>
-
       {/* Render Drawer component */}
       <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
     </header>

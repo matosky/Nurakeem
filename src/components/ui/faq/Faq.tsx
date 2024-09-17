@@ -31,10 +31,15 @@ const faqs = [
 ];
 
 const Faq = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>();
+  const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
 
+  // Toggle function to handle multiple open FAQs
   const toggleFaq = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    if (activeIndexes.includes(index)) {
+      setActiveIndexes(activeIndexes.filter((i) => i !== index)); // Remove from active if clicked again
+    } else {
+      setActiveIndexes([...activeIndexes, index]); // Add to active if clicked
+    }
   };
 
   return (
@@ -43,21 +48,23 @@ const Faq = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-formBorderColor rounded-lg px-2"
+            className="border border-formBorderColor px-4 rounded-lg px-2"
           >
-            <button
+            <div
               className={`w-full ${
-                (activeIndex !== null && activeIndex===index) ? `border-b border-formBorderColor` : ``
-              } text-left p-4 flex justify-between items-center text-gray-700 font-medium`}
+                activeIndexes.includes(index) ? `border-b border-formBorderColor` : ``
+              } text-left py-4 flex justify-between items-center text-primary`}
               onClick={() => toggleFaq(index)}
             >
-              <span>{faq.question}</span>
+              <h4 className="font-bold font-6xl max-w-[fit-content]  mobile_lg:text-sm">{faq.question}</h4>
               <div
-              className={`w-8 h-8 py-2 px-2 text-primary  rounded-[50%] bg-primary transform transition-transform ${
-                activeIndex === index ? "rotate-180" : "rotate-0"
-              }`}
+                className={`w-[35px] min-w-[35px]  h-[35px] flex items-center justify-center text-primary rounded-full bg-primary transform transition-transform ${
+                  activeIndexes.includes(index) ? "rotate-180" : "rotate-0"
+                }`}
               >
                 <svg
+                  width="24"  // Explicitly set the width
+                  height="24" // Explicitly set the height
                   fill="none"
                   stroke="white"
                   viewBox="0 0 24 24"
@@ -71,9 +78,9 @@ const Faq = () => {
                   />
                 </svg>
               </div>
-            </button>
-            {activeIndex === index && (
-              <div className="p-4 bg-white text-gray-600">{faq.answer}</div>
+            </div>
+            {activeIndexes.includes(index) && (
+              <p className="py-4 bg-white text-primary">{faq.answer}</p>
             )}
           </div>
         ))}

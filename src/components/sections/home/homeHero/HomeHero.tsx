@@ -31,7 +31,7 @@ export default function HomeHero() {
       <div className="relative z-10 flex items-center justify-center h-full w-full">
         <Container height="full">
           <div className="flex flex-col items-start justify-center h-full text-left text-white">
-            <div>
+            <div className="flex flex-col justify-start items-start gap-[15px]">
               {/* First paragraph: slides from top */}
               <p
                 className={`${
@@ -45,7 +45,7 @@ export default function HomeHero() {
               <h1
                 className={`${
                   isVisible ? 'animate-slideFromLeft' : 'opacity-0'
-                } text-6xl desktop_sm:text-5xl tablet_max:text-5xl tablet_md:text-4xl tablet_min:text-4xl mobile_lg:text-3xl mobile_md:text-2xl font-bold mt-4 tracking-wide leading-tight font-lora`}
+                } text-6xl desktop_sm:text-5xl tablet_max:text-5xl tablet_md:text-4xl tablet_min:text-4xl mobile_lg:text-3xl mobile_md:text-2xl font-bold  leading-tight font-lora`}
               >
                 Comprehensive Services for your Health, Home, and Happiness
               </h1>
@@ -65,7 +65,7 @@ export default function HomeHero() {
             <div
               className={`${
                 isVisible ? 'animate-slideFromBottom' : 'opacity-0'
-              } mt-14`}
+              } mt-[35px]`}
             >
               <Button href="/services" transBg rounded="rounded-[40px]">
                 Explore our Services
