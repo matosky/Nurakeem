@@ -5,7 +5,7 @@ type FormInputProps = InputHTMLAttributes<HTMLInputElement> &
     label: string;
     name: string;
     value?: string;
-    type?: "text" | "textarea" | "number"; // Limit to text and textarea
+    type?: "text" | "textarea" | "number"; // Limit to text, textarea, and number
     handleInputChange: (name: string, value: string) => void;
   };
 
@@ -21,7 +21,7 @@ function FormInput({
     type === "textarea" ? (
       <textarea
         name={name}
-        className="bg-white border border-formBoderColor outline-none w-full p-2 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+        className="bg-white border border-formBorderColor text-primary outline-none w-full p-2 rounded-md shadow-sm focus:ring-2 focus:ring-formBorderColor focus:border-formBorderColor resize-none"
         value={value}
         onChange={(e) => handleInputChange(name, e.target.value)}
         {...rest}
@@ -30,7 +30,9 @@ function FormInput({
       <input
         type={type}
         name={name}
-        className="bg-white border border-formBorderColor outline-none w-full p-2 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        className={`bg-white border border-formBorderColor text-primary outline-none w-full p-2 rounded-md shadow-sm focus:ring-2 focus:ring-formBorderColor focus:border-formBorderColor ${
+          type === "number" ? "no-arrows" : ""
+        }`} // Apply the 'no-arrows' class for number input type
         value={value}
         onChange={(e) => handleInputChange(name, e.target.value)}
         {...rest}

@@ -28,7 +28,7 @@ function Button({
   if (transBg) {
     return (
       <Link
-        className={`${rounded} whitespace-nowrap py-3 block px-10 hover:border-n  border border-white font-normal hover:bg-thickBtnBg bg-transBtnBg text-white transition-all flex items-center ease-in-out delay-150`}
+        className={`${rounded} whitespace-nowrap py-3 block px-10 hover:border-transparent border border-white font-normal hover:bg-thickBtnBg bg-transBtnBg text-white transition-all flex items-center ease-in-out delay-150`}
         href={href}
         target={target}
         onClick={handleClick} // Handle click

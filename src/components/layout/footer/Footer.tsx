@@ -14,10 +14,7 @@ const services = [
   { text: "Cleaning" },
 ];
 
-const socials = [
-  { icon: <FacebookIcon /> },
-  { icon: <InstagramIcon /> },
-];
+const socials = [{ icon: <FacebookIcon /> }, { icon: <InstagramIcon /> }];
 
 function Footer() {
   // Function to handle smooth scroll to top
@@ -108,10 +105,15 @@ function Footer() {
             <p className="w-full mobile_sm:text-center tablet_md:text-left text-center mb-4 text-sm font-normal leading-[24px]">
               Copyright &copy; 2024 Nurakeem Services | All Rights Reserved
             </p>
-            <div className="flex justify-center  items-center gap-4">
-              {socials.map((s, index) => {
-                return <span key={index}>{s.icon}</span>;
-              })}
+            <div className="flex justify-center items-center gap-4">
+              {socials.map((s, index) => (
+                <span
+                  key={index}
+                  className="w-6 cursor-pointer h-6 text-white hover:text-customLightGreen transition-colors duration-300"
+                >
+                  {s.icon}
+                </span>
+              ))}
             </div>
           </div>
         </Container>
