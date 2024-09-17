@@ -25,7 +25,7 @@ export default function ServicesHero() {
               Health & social, cleaning, Entertainment, <br /> social event
               management
             </p>
-            <h1 className="text-6xl text-center desktop_sm:text-5xl tablet_max:text-5xl tablet_md:text-4xl tablet_min:text-4xl mobile_lg:text-3xl mobile_md:text-2xl font-bold   leading-tight font-lora">
+            <h1 className="text-6xl w-full text-center desktop_sm:text-5xl tablet_max:text-5xl tablet_md:text-4xl tablet_min:text-4xl mobile_lg:text-3xl mobile_md:text-2xl font-bold   leading-tight font-lora">
               Our Services
             </h1>
           </div>
