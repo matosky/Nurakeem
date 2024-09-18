@@ -33,8 +33,8 @@ export async function POST(request: Request) {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "mathiasakari37@gmail.com", // Your email id
-        pass: "oxex wuuy aymq wahu", // Your password
+        user: "shamsideen7@gmail.com", // Your email id
+        pass: "Samson611", // Your password
       },
     });
 
