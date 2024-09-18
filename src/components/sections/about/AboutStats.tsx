@@ -17,8 +17,8 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">200+</div>
-                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary">200+</div>
+                <p className="text-primary mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Successful healthcare services
                 </p>
               </div>
@@ -33,8 +33,8 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">100%</div>
-                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary">100%</div>
+                <p className="text-primary mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Our Satisfied Clients
                 </p>
               </div>
@@ -49,8 +49,8 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">5</div>
-                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary">5</div>
+                <p className="text-primary mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Total Award Won
                 </p>
               </div>
@@ -67,8 +67,8 @@ export default function AboutStats() {
                   height={50}
                 />
                 <div className="flex flex-col items-start">
-                  <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">30</div>
-                  <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
+                  <div className="text-3xl mobile_lg:text-2xl font-bold text-primary">30</div>
+                  <p className="text-primary mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                     Professional Workers
                   </p>
                 </div>
