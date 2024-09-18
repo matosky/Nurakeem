@@ -6,10 +6,25 @@ export default function Addresses() {
       <Container>
         <section className="my-10">
           <div>
-            <p className="text-nurakeemYellowColor  text-center font-medium text-lg">
+            <p
+              className="text-base text-center font-normal text-nurakeemYellowColor
+  big_screen:text-lg
+  desktop:text-base
+  tablet_min:text-sm
+  mobile_lg:text-xs"
+            >
               Contact us today to get started with our <br /> Best services
             </p>
-            <h2 className="text-[24px] font-lora font-sem ibold leading-[30.72px] text-center mt-4 text-primary mb-4">
+
+            <h2
+              className="text-2xl mt-4 font-lora font-semibold leading-tight text-center text-primary mb-4
+            big_screen:text-3xl
+            desktop:text-2xl
+            tablet_min:text-xl
+            mobile_lg:text-lg
+            mobile_sm:text-base
+            mobile_xs:text-sm"
+            >
               Get In Touch With Us
             </h2>
           </div>
@@ -42,8 +57,8 @@ export default function Addresses() {
                   <strong>Phone: </strong> 020 3774 2766
                 </span>
                 <span>
-                  <strong>Email: </strong> Services@nurakeems.com <br/>or
-                  Info@nurakeems.com
+                  <strong>Email: </strong> Services@nurakeems.com <br />
+                  or Info@nurakeems.com
                 </span>
                 <span>
                   <strong>WhatsApp: </strong> 07904451016

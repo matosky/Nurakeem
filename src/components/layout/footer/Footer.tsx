@@ -5,6 +5,7 @@ import FacebookIcon from "@/components/ui/icons/FacebookIcon";
 import InstagramIcon from "@/components/ui/icons/IntagramIcon";
 import { FaPhone } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   { text: "Health & Social care Services" },
@@ -14,7 +15,16 @@ const services = [
   { text: "Cleaning" },
 ];
 
-const socials = [{ icon: <FacebookIcon /> }, { icon: <InstagramIcon /> }];
+const socials = [
+  {
+    icon: <FacebookIcon />,
+    link: "https://www.facebook.com/nurakeemservices", // Example Facebook handle
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "https://www.instagram.com/nurakeemservices", // Example Instagram handle
+  },
+];
 
 function Footer() {
   // Function to handle smooth scroll to top
@@ -107,12 +117,15 @@ function Footer() {
             </p>
             <div className="flex justify-center items-center gap-4">
               {socials.map((s, index) => (
-                <span
+                <Link
                   key={index}
-                  className="w-6 cursor-pointer h-6 text-white hover:text-customLightGreen transition-colors duration-300"
+                  href={s.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-6 h-6 text-white hover:text-customLightGreen transition-colors duration-300"
                 >
                   {s.icon}
-                </span>
+                </Link>
               ))}
             </div>
           </div>

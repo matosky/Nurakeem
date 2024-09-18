@@ -31,9 +31,9 @@ export default function Professionalism() {
           <div className="text-primary">
             {profs.map((pt, index) => {
               return (
-                <div key={index} className="flex items-center gap-4">
-                  <span className="w-5 h-5 bg-white rounded-full"></span>
-                  <span className="text-base text-white font-normal leading-[43px] text-left">
+                <div key={index} className="flex  mobile_lg:items-start items-center gap-4">
+                  <span className="w-4 min-w-4 min-h-4 mt-2 h-4 bg-white rounded-full"></span>
+                  <span className="text-base  text-white font-normal mobile_lg:leading-[30px] leading-[43px] text-left">
                     {pt.text}
                   </span>
                 </div>

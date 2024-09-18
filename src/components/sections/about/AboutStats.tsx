@@ -7,7 +7,7 @@ export default function AboutStats() {
       <Container>
         <div className="container mx-auto">
           {/* Flexbox structure for cards */}
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex  flex-wrap gap-[15px] justify-center">
             {/* Card 1 */}
             <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
@@ -55,23 +55,26 @@ export default function AboutStats() {
                 </p>
               </div>
             </div>
-
-            {/* Card 4 */}
-            <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px]  max-w-[320px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
-              <Image
-                src="images/svg/about_card_four.svg"
-                alt="icon"
-                width={50}
-                height={50}
-              />
-              <div className="flex flex-col items-start">
-                <div className="text-3xl font-bold text-gray-800">30</div>
-                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
-                  Professional Workers
-                </p>
-              </div>
-            </div>
           </div>
+
+          <div className="flex mt-[15px]  flex-wrap gap-[15px] justify-center">
+              <div className="bg-white mobile_lg:hidden mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center" />
+              <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
+                <Image
+                  src="images/svg/about_card_four.svg"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                />
+                <div className="flex flex-col items-start">
+                  <div className="text-3xl font-bold text-gray-800">30</div>
+                  <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                    Professional Workers
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white mobile_lg:hidden mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center" />
+            </div>
         </div>
       </Container>
     </section>

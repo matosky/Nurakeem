@@ -5,9 +5,18 @@ export default function AboutInfo() {
     <section className="bg-white mt-20">
       <Container>
         <div>
-          <h2 className="text-[24px] font-lora font-semibold leading-[30.72px] text-left text-primary mb-4">
+          <h2
+            className="text-2xl font-lora font-semibold leading-tight text-left text-primary mb-4
+  big_screen:text-3xl
+  desktop:text-2xl
+  tablet_min:text-xl
+  mobile_lg:text-lg
+  mobile_sm:text-base
+  mobile_xs:text-sm"
+          >
             About Us
           </h2>
+
           <div className="text-primary">
             <p className="text-base font-normal mobile_lg:leading-[30px] leading-[40px] text-left">
               <strong>Nurakeem Services</strong> is registered and regulated by

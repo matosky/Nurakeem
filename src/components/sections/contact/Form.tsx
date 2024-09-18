@@ -54,16 +54,30 @@ export default function ContactForm() {
   return (
     <section className="py-20" id="book-meeting">
       <Container>
-        <h2 className="text-[24px] font-lora font-semibold leading-[30.72px] text-center text-primary mb-4">
+        <h2 
+        className="text-2xl  font-lora font-semibold leading-tight text-center text-primary mb-4
+        big_screen:text-3xl
+        desktop:text-2xl
+        tablet_min:text-xl
+        mobile_lg:text-lg
+        mobile_sm:text-base
+        mobile_xs:text-sm"
+        >
           Book a Meeting
         </h2>
         <div className="text-primary">
-          <p className="text-base font-normal leading-[30px] text-center">
+          <p 
+          className="text-base text-center font-normal text-primary
+          big_screen:text-lg
+          desktop:text-base
+          tablet_min:text-sm
+          mobile_lg:text-xs"
+          >
             Please fill out the form below to be added to <br /> our customer list
           </p>
         </div>
 
-        <form className="w-full max-w-[700px] mx-auto" onSubmit={handleSubmit}>
+        <form className="w-full mt-10 max-w-[700px] mx-auto" onSubmit={handleSubmit}>
           <div className="flex flex-col tablet_md:flex-row gap-4">
             <div className="w-full tablet_md:w-1/2">
               <FormInput

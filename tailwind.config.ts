@@ -44,6 +44,9 @@ const config: Config = {
       mobile_xs: { max: "281px" },
     },
     extend: {
+      boxShadow: {
+        'custom-dark': '0px 4px 10px rgba(12, 9, 9, 0.5)', // Custom shadow with your color
+      },
       fontFamily: {
         lora: ["var(--font-lora)"],
         openSans: ["var(--font-open-sans)"],

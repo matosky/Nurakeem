@@ -52,9 +52,7 @@ export default function HomeHero() {
 
               {/* Second paragraph: slides from bottom */}
               <p
-                className={`${
-                  isVisible ? 'animate-slideFromBottom' : 'opacity-0'
-                } mt-4 text-xl desktop_sm:text-lg tablet_max:text-lg tablet_md:text-lg tablet_min:text-base mobile_lg:text-sm mobile_md:text-xs`}
+                className={`text-xl desktop_sm:text-lg tablet_max:text-lg tablet_md:text-lg tablet_min:text-base mobile_lg:text-sm mobile_md:text-xs`}
               >
                 From Healthcare to Entertainment, We Provide all the Services
                 you Need

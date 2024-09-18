@@ -35,6 +35,11 @@ export const mobileHeaderRoutes = [
     path: "/about"
   },
   {
+    name: "Faqs",
+    id: "faq",
+    path:"/faq"
+  },
+  {
     name: "Services",
     id: "services",
     path: "/services"
@@ -43,12 +48,7 @@ export const mobileHeaderRoutes = [
     name: "Contact",
     id: "contact",
     path:"/contact"
-  },
-  {
-    name: "Faqs",
-    id: "faq",
-    path:"/faq"
-  },
+  }
 ];
   
   export const footerRoutes = [
