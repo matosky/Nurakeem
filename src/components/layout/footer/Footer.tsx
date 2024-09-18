@@ -18,11 +18,11 @@ const services = [
 const socials = [
   {
     icon: <FacebookIcon />,
-    link: "https://www.facebook.com/nurakeemservices", // Example Facebook handle
+    link: "https://www.facebook.com/profile.php?id=100031368097614&mibextid=ZbWKwL", // Example Facebook handle
   },
   {
     icon: <InstagramIcon />,
-    link: "https://www.instagram.com/nurakeemservices", // Example Instagram handle
+    link: "https://www.instagram.com/nura.keem", // Example Instagram handle
   },
 ];
 

@@ -25,9 +25,9 @@ const config: Config = {
       },
     },
     animation: {
-      slideFromTop: "slideFromTop 1s ease-out forwards",
-      slideFromLeft: "slideFromLeft 1s ease-out forwards",
-      slideFromBottom: "slideFromBottom 1s ease-out forwards",
+      slideFromTop: "slideFromTop 0.5s ease-out forwards",
+      slideFromLeft: "slideFromLeft 0.5s ease-out forwards",
+      slideFromBottom: "slideFromBottom 0.5s ease-out forwards",
       slideIn: "slideIn 1s ease-out forwards", // duration can be adjusted as needed
     },
     screens: {

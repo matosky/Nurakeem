@@ -9,7 +9,7 @@ export default function HomeHero() {
 
   useEffect(() => {
     // Trigger animations when the component is mounted
-    setTimeout(() => setIsVisible(true), 50);
+    setTimeout(() => setIsVisible(true), 10);
   }, []);
 
   return (
