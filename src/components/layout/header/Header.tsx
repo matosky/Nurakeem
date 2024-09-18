@@ -137,7 +137,7 @@ function Header() {
           </div>
         )}
       </div>
-      <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
+      {isDrawerOpen && <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />}
     </header>
   );
 }
