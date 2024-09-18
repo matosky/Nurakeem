@@ -25,7 +25,7 @@ const Drawer = ({ isOpen, onClose }: DrawerProps) => {
             >
               <Link
                 href={route.path}
-                className="text-lg uppercase font-normal text-primary hover:text-customLightGreen"
+                className="text-lg uppercase font-normal text-primary hover:primary"
                 onClick={onClose} // Close the drawer on link click
               >
                 {route.name}
