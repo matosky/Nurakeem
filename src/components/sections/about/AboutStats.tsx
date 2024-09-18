@@ -7,7 +7,7 @@ export default function AboutStats() {
       <Container>
         <div className="container mx-auto">
           {/* Flexbox structure for cards */}
-          <div className="flex  flex-wrap gap-[15px] justify-center">
+          <div className="flex flex-wrap gap-[15px] justify-center">
             {/* Card 1 */}
             <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
               <Image
@@ -17,8 +17,8 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl font-bold text-gray-800">200+</div>
-                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">200+</div>
+                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Successful healthcare services
                 </p>
               </div>
@@ -33,8 +33,8 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl font-bold text-gray-800">100%</div>
-                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">100%</div>
+                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Our Satisfied Clients
                 </p>
               </div>
@@ -49,15 +49,15 @@ export default function AboutStats() {
                 height={50}
               />
               <div className="flex flex-col items-start">
-                <div className="text-3xl font-bold text-gray-800">5</div>
-                <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">5</div>
+                <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                   Total Award Won
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex mt-[15px]  flex-wrap gap-[15px] justify-center">
+          <div className="flex mt-[15px] flex-wrap gap-[15px] justify-center">
               <div className="bg-white mobile_lg:hidden mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center" />
               <div className="bg-white mobile_lg:w-full flex-1 min-w-[300px] max-w-[400px] gap-3 flex items-center p-8 rounded-lg text-center border-2 border-formBorder border-dashed">
                 <Image
@@ -67,8 +67,8 @@ export default function AboutStats() {
                   height={50}
                 />
                 <div className="flex flex-col items-start">
-                  <div className="text-3xl font-bold text-gray-800">30</div>
-                  <p className="text-gray-600 text-left whitespace-nowrap mt-2">
+                  <div className="text-3xl mobile_lg:text-2xl font-bold text-primary-800">30</div>
+                  <p className="text-primary-600 mobile_lg:text-sm text-left whitespace-nowrap mt-2">
                     Professional Workers
                   </p>
                 </div>
