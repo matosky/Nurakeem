@@ -5,7 +5,7 @@ export default function FaqHero() {
   return (
     <section
       id="hero"
-      className="relative w-screen h-screen bg-cover bg-center"
+      className="hero-section relative w-screen h-screen bg-cover bg-center"
     >
       {/* Optimized Background Image */}
       <Image

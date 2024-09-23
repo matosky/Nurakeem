@@ -3,7 +3,7 @@ import Button from "../../ui/button/Button";
 
 export default function ServicesHero() {
   return (
-    <section id="hero" className="relative w-screen h-screen bg-cover bg-center">
+    <section id="hero" className="hero-section relative w-screen h-screen bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/service_hero.png"

@@ -4,7 +4,7 @@ import Button from "../../ui/button/Button";
 
 export default function AboutHero() {
   return (
-    <section id="hero" className="relative mt-[-70px] w-screen h-screen bg-cover bg-center">
+    <section id="hero" className="hero-section relative mt-[-70px] w-screen h-screen bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/about_hero.png"

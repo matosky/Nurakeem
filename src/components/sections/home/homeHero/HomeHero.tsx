@@ -13,7 +13,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section id="hero" className="relative w-screen h-screen bg-cover bg-center">
+    <section id="hero" className="hero-section relative w-screen h-screen bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/home_hero.png"

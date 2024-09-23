@@ -6,6 +6,7 @@ import InstagramIcon from "@/components/ui/icons/IntagramIcon";
 import { FaPhone } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react"; // Import React hooks
 
 const services = [
   { text: "Health & Social care Services" },
@@ -27,6 +28,9 @@ const socials = [
 ];
 
 function Footer() {
+  // State to handle the visibility of the scroll to top button
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
   // Function to handle smooth scroll to top
   const handleScrollToTop = () => {
     const topElement = document.getElementById("top");
@@ -34,6 +38,30 @@ function Footer() {
       topElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Function to track scroll position and detect hero section visibility
+  const handleScroll = () => {
+    const heroSections = document.querySelectorAll(".hero-section");
+    let shouldShowButton = true; // Default to showing the button if no hero section is found
+
+    // Check if any hero section is in view
+    heroSections.forEach((hero) => {
+      const heroRect = hero.getBoundingClientRect();
+      if (heroRect.bottom > 0) {
+        shouldShowButton = false; // If any hero section is visible, hide the button
+      }
+    });
+
+    setShowScrollToTop(shouldShowButton); // Show the button only if no hero section is visible
+  };
+
+  // Add scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <footer className="bg-nurakeemFooterBg relative pt-6 pb-10">
@@ -43,7 +71,7 @@ function Footer() {
             <h2 className="text-customLightGreen text-[20px] font-lora font-semibold leading-[28px] mb-4">
               <NuraLogo />
             </h2>
-            <p className="text-white  text-sm font-normal leading-[24px] text-left">
+            <p className="text-white text-sm font-normal leading-[24px] text-left">
               Nurakeem Services offers comprehensive solutions including Health
               and Social Care, professional Cleaning, Entertainment, Event
               Management, Retail, and Restaurant services. We are dedicated to
@@ -52,8 +80,8 @@ function Footer() {
             </p>
           </div>
 
-          <div className="flex-1 max-w-[fit-content]  flex flex-col items-center">
-            <h2 className="text-customLightGreen text-[20px] w-full    font-lora font-semibold leading-[28px] text-left mb-4">
+          <div className="flex-1 max-w-[fit-content] flex flex-col items-center">
+            <h2 className="text-customLightGreen text-[20px] w-full font-lora font-semibold leading-[28px] text-left mb-4">
               Our Services
             </h2>
             <div className="text-white">
@@ -68,7 +96,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex-1 ">
+          <div className="flex-1">
             <h2 className="text-customLightGreen text-[20px] font-lora font-semibold leading-[28px] text-left mb-4">
               Contact
             </h2>
@@ -133,12 +161,14 @@ function Footer() {
       </section>
 
       {/* Scroll to top button with smooth scroll behavior */}
-      <div
-        className="fixed bottom-[10%] right-[10%] cursor-pointer"
-        onClick={handleScrollToTop}
-      >
-        <Image src="images/svg/top.svg" width={45} height={45} alt="icon" />
-      </div>
+      {showScrollToTop && (
+        <div
+          className="fixed bottom-[10%] right-[10%] cursor-pointer"
+          onClick={handleScrollToTop}
+        >
+          <Image src="images/svg/top.svg" width={45} height={45} alt="icon" />
+        </div>
+      )}
     </footer>
   );
 }

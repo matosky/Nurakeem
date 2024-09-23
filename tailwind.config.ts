@@ -45,7 +45,7 @@ const config: Config = {
     },
     extend: {
       boxShadow: {
-        'custom-dark': '0px 4px 10px rgba(12, 9, 9, 0.5)', // Custom shadow with your color
+        'custom-dark': '0px 3px 8px rgba(12, 9, 9, 0.15)', // Reduced shadow intensity
       },
       fontFamily: {
         lora: ["var(--font-lora)"],

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactHero() {
   return (
-    <section id="hero" className="relative w-screen h-screen bg-cover bg-center">
+    <section id="hero" className="hero-section relative w-screen h-screen bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/contact_hero.png"
