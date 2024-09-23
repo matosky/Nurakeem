@@ -1,7 +1,6 @@
 "use client";
 import Container from "@/components/layout/wrapper/Container";
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
 
 const cards = [
   {
