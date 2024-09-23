@@ -5,7 +5,7 @@ export default function FaqHero() {
   return (
     <section
       id="hero"
-      className="hero-section relative w-screen h-screen bg-cover bg-center"
+      className="hero-section relative w-screen h-screen mobile_lg:h-[40vh] bg-cover bg-center"
     >
       {/* Optimized Background Image */}
       <Image
@@ -13,6 +13,7 @@ export default function FaqHero() {
         alt="FAQ Hero"
         layout="fill"
         objectFit="cover"
+        objectPosition="center" // Ensures the image is centered
         priority // Ensures the image is loaded quickly
         className="absolute"
       />
@@ -24,7 +25,7 @@ export default function FaqHero() {
       <div className="relative z-10 flex items-center justify-center h-full w-full">
         <Container height="full">
           <div className="flex flex-col mobile_lg:w-full items-start justify-center h-full text-left text-white">
-            <div className="flex flex-col mobile_lg:w-full justify-start items-start gap-[15px]">
+            <div className="flex flex-col mobile_lg:w-full justify-start items-start gap-[5px]">
               <p
                 className={`text-nurakeemYellowColor mobile_lg:w-full mobile_lg:text-center font-medium text-xl desktop_sm:text-lg tablet_max:text-lg tablet_md:text-lg tablet_min:text-base mobile_lg:text-sm mobile_md:text-xs`}
               >

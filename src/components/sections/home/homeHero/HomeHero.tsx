@@ -13,7 +13,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section id="hero" className="hero-section relative w-screen h-screen bg-cover bg-center">
+    <section id="hero" className="hero-section relative w-screen h-screen mobile_lg:h-[60vh] bg-cover bg-center">
       {/* Optimized Background Image */}
       <Image
         src="/images/home_hero.png"
@@ -31,7 +31,7 @@ export default function HomeHero() {
       <div className="relative z-10 flex items-center justify-center h-full w-full">
         <Container height="full">
           <div className="flex flex-col items-start justify-center h-full text-left text-white">
-            <div className="flex flex-col justify-start items-start gap-[15px]">
+            <div className="flex flex-col justify-start items-start gap-[5px]">
               {/* First paragraph: slides from top */}
               <p
                 className={`${
