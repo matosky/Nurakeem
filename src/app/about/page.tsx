@@ -4,7 +4,6 @@ import AboutStats from "@/components/sections/about/AboutStats";
 import OurValues from "@/components/sections/about/OurValues";
 import Professionalism from "@/components/sections/about/Professionalism";
 import AboutVison from "@/components/sections/about/Vision";
-import RootLayout from "../layout";
 
 export default function About() {
   return (
