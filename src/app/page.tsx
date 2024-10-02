@@ -4,10 +4,10 @@ import HomeHero from "@/components/sections/home/homeHero/HomeHero";
 
 export default function Home() {
   return (
-  <div>
-    <HomeHero />
-    <Care />
-    <DailyService />
-  </div>
+    <>
+      <HomeHero />
+      <Care />
+      <DailyService />
+    </>
   );
 }

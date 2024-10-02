@@ -141,7 +141,14 @@ function Footer() {
         <Container>
           <div>
             <p className="w-full mobile_sm:text-center tablet_md:text-left text-center mb-4 text-sm font-normal leading-[24px]">
-              Copyright &copy; 2024 Nurakeem Services | All Rights Reserved
+              Copyright &copy; 2024 Nurakeem Services | All rights reserved |
+              Designed by:&nbsp;
+              <a
+                className="text-nurakeemYellowColor"
+                href="mailto:benedictugwechi@gmail.com"
+              >
+                benedictugwechi@gmail.com
+              </a>
             </p>
             <div className="flex justify-center items-center gap-4">
               {socials.map((s, index) => (
