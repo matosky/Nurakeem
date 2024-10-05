@@ -6,27 +6,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { firstName, lastName, phoneNumber, email, address1, address2, message } = body;
 
-    // Save form data to MongoDB
-    // const client = await clientPromise;
-    // const db = client.db("nurakeem"); // Replace with your database name
-    // const collection = db.collection("contactSubmissions"); // Replace with your collection name
-
-    // // Insert data into MongoDB
-    // const result = await collection.insertOne({
-    //   firstName,
-    //   lastName,
-    //   phoneNumber,
-    //   email,
-    //   address1,
-    //   address2,
-    //   message,
-    //   createdAt: new Date(),
-    // });
-
-    // if (!result.acknowledged) {
-    //   return NextResponse.json({ message: 'Failed to save data to MongoDB.' }, { status: 500 });
-    // }
-
     // Create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com", // Replace with your mail server info
