@@ -1,0 +1,7 @@
+# wrangler.toml
+name = "nurakeem"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "nurakeemkv"
+id = "87b2578b1b824cdb8e2ee4799a958caa"
