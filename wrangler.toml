@@ -1,7 +1,9 @@
-# wrangler.toml
-name = "nurakeem"
+name = "my-next-app"
 compatibility_flags = ["nodejs_compat"]
 
+# Build output directory for Cloudflare Pages
+pages_build_output_dir = ".next"
+
 [[kv_namespaces]]
-binding = "nurakeemkv"
-id = "87b2578b1b824cdb8e2ee4799a958caa"
+binding = "MY_KV1"
+id = "87b2578b1b824cdb8e2ee4799a958caa"  # Replace with your actual KV namespace ID
